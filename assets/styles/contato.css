@@ -16,7 +16,7 @@
   font-size: 18px;
 }
 .contato__texto {
-  padding: 1em 0 1.5em 0;
+  padding: 1em 0 0.5em 0;
   font-weight: 300;
 }
 
@@ -34,4 +34,26 @@
   padding-left: 2.5em;
   padding-bottom: 1em;
   color: var(--azul);
+}
+
+@media screen and (min-width: 1024px) {
+  .contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+  }
+
+  .contato__titulo {
+    font-size: 24px;
+  }
+
+  .contato input {
+    width: 30%;
+  }
+
+  .contato__descricao {
+    width: 35%;
+    align-self: center;
+  }
 }

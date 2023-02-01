@@ -59,3 +59,10 @@
   justify-self: center;
   text-decoration: none;
 }
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 50%;
+    margin: 3em auto;
+  }
+}
