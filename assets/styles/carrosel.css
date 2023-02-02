@@ -40,9 +40,26 @@
   .swiper-button-prev,
   .swiper-button-next {
     display: block;
-    top: 65%;
+    top: 60%;
     /* background: var(--azul-gradiente);
     color: var(--branco);
     border-radius: 100%; */
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .carrosel__titulo {
+    font-size: 32px;
+  }
+
+  .carrosel__container {
+    display: flex;
+    align-items: center;
+    margin: 3em 10vw;
+    gap: 5em;
+  }
+
+  .swiper-pagination {
+    margin: 1em 0;
   }
 }

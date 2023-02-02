@@ -57,3 +57,14 @@
     align-self: center;
   }
 }
+
+@media screen and (min-width: 1728px) {
+  .contato {
+    padding: 3em 20vw;
+    gap: 2em;
+  }
+
+  .contato__descricao {
+    width: 38%;
+  }
+}
