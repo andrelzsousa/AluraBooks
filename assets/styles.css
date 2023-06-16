@@ -5,11 +5,12 @@
 @import url(./styles/topicos.css);
 @import url(./styles/contato.css);
 @import url(./styles/rodape.css);
+@import url(./styles/cadastro.css);
 
 :root {
   --cor-de-fundo: #ebecee;
-  --fonte-principal: "Poppins";
-  --fonte-secundaria: "Josefin Sans";
+  --fonte-principal: 'Poppins';
+  --fonte-secundaria: 'Josefin Sans';
   --laranja: #eb9b00;
   --azul: #002f52;
   --azul-gradiente: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);

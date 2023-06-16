@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alura Books</title>
+    <title>cadastro</title>
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -115,200 +115,148 @@
     </header>
 
     <section class="banner">
-      <div class="banner__box">
-        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
-        <p class="banner__texto">
-          Encontre em nossa estante o que precisa para seu desenvolvimento!
-        </p>
-      </div>
-      <input
-        type="search"
-        class="banner__pesquisa"
-        placeholder="Qual será a sua próxima leitura?"
-      />
+      <p class="banner__titulo">Tela de Cadastro</p>
     </section>
 
-    <section class="carrosel">
-      <h2 class="carrosel__titulo">Últimos lançamentos</h2>
+    <form
+      class="formulario"
+      id="formulario"
+      target="_blank"
+      onsubmit="location.replace('./cadastro-finalizado.html')"
+    >
+      <p class="formulario__titulo">Dados do cadastro</p>
+      <p class="formulario__subtitulo">Dados pessoais</p>
 
-      <!-- Slider main container -->
-      <div class="carrosel__container">
-        <div class="swiper">
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
+      <div class="campos">
+        <label for="nome" class="formulario__label">Nome Completo</label>
+        <input
+          type="text"
+          name="nome"
+          class="formulario__input formulario__input_texto"
+        />
 
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <img src="./assets/images/Angular.svg" alt="Livro de Angular" />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="./assets/images/Guia Front-end.svg"
-                alt="Livro de Front-end"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="./assets/images/MetricasAgeis.svg"
-                alt="Livro de Métricas ágeis"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="./assets/images/Portugol.svg"
-                alt="Livro de Métricas ágeis"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="./assets/images/ReactNative.svg"
-                alt="Livro de Métricas ágeis"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/UX.svg" alt="Livro de Métricas ágeis" />
-            </div>
-          </div>
+        <label for="email" class="formulario__label">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="formulario__input formulario__input_texto"
+        />
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-
-        <div class="card">
-          <div class="card__esquerda">
-            <h2 class="card__titulo">Talvez você também se interesse por...</h2>
-            <h3 class="card__titulo-livro">Angular 11 e Firebase</h3>
-            <p class="card__texto">
-              Construindo uma aplicação integrada com a plataforma do Google.
-            </p>
-            <div class="card__icones">
-              <img
-                src="./assets/images/Favoritos (1).svg"
-                alt="Seus favoritos"
-              />
-              <img src="./assets/images/Sacola.svg" alt="Sua sacola" />
-            </div>
-          </div>
-          <div class="card__direita">
-            <img src="./assets/images/AngularFoto.svg" />
-            <a class="card__botao" href="#">Saiba Mais</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="carrosel">
-      <h2 class="carrosel__titulo">Mais vendidos</h2>
-
-      <!-- Slider main container -->
-      <div class="carrosel__container">
-        <div class="swiper">
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <img
-                src="./assets/images/Arquitetura.svg"
-                alt="Livro de arquitetura de software"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="./assets/images/Acessibilidade.svg"
-                alt="Livro de acessibilidade na web"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="./assets/images/Construct2.svg"
-                alt="Livro de Construct 2"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="./assets/images/Liderança.svg"
-                alt="Livro de Liderança em Design"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/Tuning.svg" alt="Livro de SQL" />
-            </div>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-
-        <div class="card">
-          <div class="card__esquerda">
-            <img
-              src="./assets/images/Estrelinhas.svg"
-              alt="Avaliação da autora"
-              class="card__esquerda__avaliacao"
+        <div class="campos__especiais">
+          <div class="especiais__box">
+            <label for="data" class="formulario__label">Nascimento</label>
+            <input
+              type="date"
+              name="data"
+              class="formulario__input formulario__input_data"
             />
-            <h2 class="card__titulo">Autora do mês</h2>
-            <h3 class="card__titulo-livro">Juliana Agarikov</h3>
-            <p class="card__texto">
-              Analista de sistemas e escritora, Juliana é especialista em
-              Front-end
-            </p>
-
-            <div class="card__icones">
-              <img
-                src="./assets/images/Favoritos (1).svg"
-                alt="Seus favoritos"
-              />
-              <img src="./assets/images/Sacola.svg" alt="Suas compras" />
-            </div>
           </div>
 
-          <div class="card__direita">
-            <img
-              src="./assets/images/Escritora.svg"
-              alt="Foto de Juliana Agarikov"
+          <div class="especiais__box">
+            <label for="tel" class="formulario__label">Contato</label>
+            <input
+              type="tel"
+              name="tel"
+              class="formulario__input formulario__input_tel"
             />
-            <a href="#" class="card__botao">Saiba mais</a>
           </div>
         </div>
       </div>
-    </section>
 
-    <div class="separacao"></div>
+      <p class="formulario__subtitulo">Endereço</p>
 
-    <section class="topicos">
-      <h2 class="topicos__titulo">Tópicos visitados recentemente</h2>
-      <div class="topicos__lista">
-        <a href="#">Android</a>
-        <a href="#">Marketing digital</a>
-        <a href="#">Agile</a>
-        <a href="#">Startups</a>
-        <a href="#">HTML & CSS</a>
-        <a href="#">Python</a>
-        <a href="#">OO</a>
-        <a href="#">Java</a>
+      <div class="campos">
+        <label for="cep" class="formulario__label">CEP</label>
+        <input
+          type="text"
+          name="cep"
+          class="formulario__input formulario__input_texto"
+        />
+
+        <label for="endereco" class="formulario__label">Endereco</label>
+        <input
+          type="text"
+          name="endereco"
+          class="formulario__input formulario__input_texto"
+        />
+
+        <div class="campos__especiais">
+          <div class="especiais__box">
+            <label for="numero" class="formulario__label">Número</label>
+            <input
+              type="number"
+              name="numero"
+              class="formulario__input formulario__input_data"
+            />
+          </div>
+
+          <div class="especiais__box">
+            <label for="complemento" class="formulario__label"
+              >Complemento</label
+            >
+            <input
+              type="text"
+              name="complemento"
+              class="formulario__input formulario__input_numero"
+            />
+          </div>
+        </div>
+
+        <label for="bairro" class="formulario__label">Bairro</label>
+        <input
+          type="text"
+          name="bairro"
+          class="formulario__input formulario__input_texto"
+        />
+
+        <div class="campos__especiais">
+          <div class="especiais__box">
+            <label for="cidade" class="formulario__label">Cidade</label>
+            <input type="text" name="cidade" class="formulario__input" />
+          </div>
+
+          <div class="especiais__box">
+            <label class="formulario__label" for="estado">UF</label>
+            <select
+              id="estado"
+              name="estado"
+              class="formulario__input formulario__input_select"
+            >
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+              <option value="EX">Estrangeiro</option>
+            </select>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section class="contato">
-      <div class="contato__descricao">
-        <h2 class="contato__titulo">Fique Por dentro das novidades!</h2>
-        <p class="contato__texto">
-          Atualizações de e-books, novos livros, promoções e outors.
-        </p>
-      </div>
-      <input
-        type="email"
-        class="contato__busca"
-        placeholder="Cadastre seu e-mail"
-      />
-    </section>
-
-    <hr />
+      <button type="submit" class="btn-submit">Enviar formulário</button>
+    </form>
 
     <footer class="rodape">
       <h2 class="rodape__titulo">Grupo Alura</h2>
@@ -389,18 +337,5 @@
         </li>
       </ul>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-    <script>
-      const swiper = new Swiper('.swiper', {
-        spaceBetween: 10,
-        slidesPerView: 3,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-        },
-      });
-    </script>
   </body>
 </html>
