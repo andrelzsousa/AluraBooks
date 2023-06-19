@@ -25,7 +25,14 @@ async function buscaCEP(cep) {
 //buscaCEP(52050020).then(reposta => console.log(reposta))
 let flag = 0
 const cepElement = document.getElementById('cep')
-cepElement.addEventListener('focusout', () => {
+cepElement.addEventListener('input', () => {
+    if (cepElement.value.length === 8) {
+        a(); // Chame a sua função aqui quando 8 dígitos forem digitados
+    }
+
+})
+
+function a() {
     buscaCEP(cepElement.value).then(resposta => {
         inputComplete('endereco', resposta, 'logradouro')
         inputComplete('bairro', resposta, 'bairro')
@@ -41,9 +48,7 @@ cepElement.addEventListener('focusout', () => {
         flag++
 
     })
-
-})
-
+}
 function inputComplete(id, reposta, valor) {
     const campo = document.getElementById(id)
     campo.value = reposta[valor]
@@ -79,6 +84,7 @@ check.addEventListener('click', (e) => {
         ativaCampo('estado')
 
         desativaCampo('cep')
+        document.getElementById('cep').value = ""
     }
     else {
         desativaCampo('endereco')
@@ -93,6 +99,7 @@ check.addEventListener('click', (e) => {
 
 function ativaCampo(id) {
     document.getElementById(id).removeAttribute('disabled')
+    document.getElementById(id).value = ""
 }
 
 function desativaCampo(id) {
