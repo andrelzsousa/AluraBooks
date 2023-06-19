@@ -32,6 +32,10 @@
   margin-bottom: 2em;
 }
 
+.formulario__input:focus {
+  background-color: #eb9d000e;
+}
+
 .formulario__label {
   align-self: start;
   color: var(--azul);
@@ -69,4 +73,21 @@
 .formulario__input_select {
   font-family: var(--fonte-principal);
   border: 2px solid black;
+}
+
+.check {
+  align-self: start;
+  margin-bottom: 2em;
+}
+
+.cep {
+  margin-bottom: 1em;
+}
+
+.erro {
+  align-self: self-start;
+  color: red;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  font-weight: 700;
 }

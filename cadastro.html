@@ -168,16 +168,24 @@
       <div class="campos">
         <label for="cep" class="formulario__label">CEP</label>
         <input
+          id="cep"
           type="text"
           name="cep"
-          class="formulario__input formulario__input_texto"
+          class="formulario__input formulario__input_texto cep"
         />
+        <div id="erro" class="erro"></div>
+        <div class="check" id="check">
+          <input type="checkbox" />
+          <span>Não possuo CEP</span>
+        </div>
 
         <label for="endereco" class="formulario__label">Endereco</label>
         <input
+          id="endereco"
           type="text"
           name="endereco"
           class="formulario__input formulario__input_texto"
+          disabled
         />
 
         <div class="campos__especiais">
@@ -186,7 +194,9 @@
             <input
               type="number"
               name="numero"
+              id="numero"
               class="formulario__input formulario__input_data"
+              disabled
             />
           </div>
 
@@ -196,23 +206,33 @@
             >
             <input
               type="text"
+              id="complemento"
               name="complemento"
               class="formulario__input formulario__input_numero"
+              disabled
             />
           </div>
         </div>
 
         <label for="bairro" class="formulario__label">Bairro</label>
         <input
+          id="bairro"
           type="text"
           name="bairro"
           class="formulario__input formulario__input_texto"
+          disabled
         />
 
         <div class="campos__especiais">
           <div class="especiais__box">
             <label for="cidade" class="formulario__label">Cidade</label>
-            <input type="text" name="cidade" class="formulario__input" />
+            <input
+              type="text"
+              name="cidade"
+              id="cidade"
+              class="formulario__input"
+              disabled
+            />
           </div>
 
           <div class="especiais__box">
@@ -221,7 +241,9 @@
               id="estado"
               name="estado"
               class="formulario__input formulario__input_select"
+              disabled
             >
+              <option></option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
               <option value="AP">Amapá</option>
@@ -337,5 +359,7 @@
         </li>
       </ul>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
