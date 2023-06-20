@@ -3,11 +3,13 @@ const element = document.getElementById('livros')
 function displayBooks(bookList) {
   element.innerHTML = ''
   bookList.forEach((book, index) => {
+
+    let availability = book.quantidade > 0 ? '' : 'indisponivel'
     element.innerHTML +=
       `
         <div class="livro">
         <img
-          class="livro__imagens"
+          class="livro__imagens ${availability}"
           src=${book.imagem}
           alt=${book.alt}
         />

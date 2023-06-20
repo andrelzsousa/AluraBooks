@@ -23,6 +23,15 @@ filterTypeButtons.forEach((btn, index) => {
     })
 })
 
+const btnAvailableFilter = document.getElementById('btnLivrosDisponiveis')
+btnAvailableFilter.addEventListener('click', () => {
+    let availableBooks = books.filter((book) => {
+        return book.quantidade > 0
+
+    })
+    displayBooks(availableBooks)
+})
+
 const btnRemoveFilter = document.getElementById('remove')
 remove.addEventListener('click', () => {
     displayBooks(books)
