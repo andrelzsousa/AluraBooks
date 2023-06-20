@@ -38,7 +38,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 30px;
-  margin: 4rem 0;
+  margin: 4rem 0 2rem 0;
 }
 
 .btn {
@@ -60,6 +60,10 @@ body {
   color: #cecdcd;
   border-radius: 10px;
   border-bottom: 2px solid var(--text-description-color);
+}
+
+.btn-remove {
+  margin-bottom: 2rem;
 }
 
 .livros {
