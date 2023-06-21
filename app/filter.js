@@ -27,12 +27,21 @@ const btnAvailableFilter = document.getElementById('btnLivrosDisponiveis')
 btnAvailableFilter.addEventListener('click', () => {
     let availableBooks = books.filter((book) => {
         return book.quantidade > 0
-
     })
     displayBooks(availableBooks)
+    let totalValue = availableBooks.reduce((acc, cur) => acc + cur.preco, 0)
+    displayTotalValue(totalValue)
 })
 
 const btnRemoveFilter = document.getElementById('remove')
 remove.addEventListener('click', () => {
     displayBooks(books)
 })
+
+function displayTotalValue(totalValue) {
+    totalValueElement.innerHTML = `
+    <div class="livros__disponiveis">
+        <p>Todos os livros disponíveis por R$ <span id="valor">R$${totalValue.toFixed(2)}</span></p>
+    </div>
+    `
+}

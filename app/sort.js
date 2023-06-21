@@ -5,5 +5,7 @@ btnSort.addEventListener('click', () => {
         return a.preco - b.preco
     })
     displayBooks(sortedBooks)
+    //btnSortSwitch = btnSortSwitch == false ? true : false
+
 })
 
